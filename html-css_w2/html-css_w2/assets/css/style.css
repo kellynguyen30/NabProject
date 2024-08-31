@@ -1,0 +1,587 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Lato', sans-serif; 
+    color: #222; 
+    margin-bottom: 0.5em; 
+    opacity: 0.8;
+    /* kiểu chữ cho cả web, có tính kế thừa */
+    /* 2 cái font đầu sẽ tự chọn cái nào có thì lấy
+    nếu ko thì sẽ lựa chọn chủng không chân ngẫu nhiên của sans-serif */
+}
+
+.clear {
+    clear: both;
+}
+
+
+.text-center {
+    text-align: center !important;
+}
+
+
+.pull-right{
+    float: right;
+}
+
+
+.mt-8{
+    margin-top: 8px !important;
+}
+
+.mt-16{
+    margin-top: 16px !important;
+}
+
+.mt-32{
+    margin-top: 32px !important;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;;
+    padding-right: 8px;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: 33.3333%;
+}
+
+/* Main */
+#main {
+    overflow: hidden;
+}
+
+/* Header */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 45px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn,
+#header .search-btn {
+    float: right;
+    padding: 0 21px;
+    color: #000;
+}
+
+#header .search-btn:hover {
+    cursor: pointer;
+    background-color: #f44336;
+}
+
+#header .search-btn:hover i {
+    color: white;
+}
+
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon{
+    color: #000;
+}
+
+#header .menu-icon,
+#header .search-icon {
+    color: #000;
+    font-size: 20px;
+    line-height: 46px;
+    font-weight: 600;
+} 
+/* Nav */
+#nav {
+    display: inline-block;
+    font-weight: 500;
+}
+
+#nav .subnav {
+    list-style-type: none;
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav > li > a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 500;
+} 
+
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+
+/* Slider */ 
+
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 30%;
+    background: url('../img/slider/Slider1.jpg') top center/cover no-repeat;
+    position: relative;
+}
+
+
+#slider .text-content {  
+    position: absolute;
+    bottom: 50%;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 10px;
+    width: 28%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#slider .text-heading {
+    padding: 12px 24px;
+    font-weight: 400;
+    font-size: 24px;
+    background-color: #000;
+    text-align: center;
+}
+
+/* Content */ 
+#content {
+    color: #777777;
+}
+
+#content .content-section{
+    width: 800px;
+    max-width: 100%;
+    padding: 60px 0 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#content .section-heading {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+        /* khoảng cách giữa các chữ cái */
+}
+
+#content .section-sub-heading {
+    font-size: 15px;
+    text-align: center; 
+    margin-top: 25px;
+    font-style: italic;  
+    color: #777777 ;       
+}
+
+#content .about-text {
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#content .members-list {
+    margin-top:  32px;    
+}
+
+
+#content .member-name {
+    font-size: 15px;
+}
+
+#content .my-name{
+    font-weight: 600;
+}
+
+#content .member-img {
+    width: 350px;
+    margin-top: 25px;
+    border-radius: 5px;
+    filter: blur(1px) brightness(100%); 
+    transition: filter 0.1s ease; 
+}
+
+#content .member-img:hover {
+    filter: blur(0) brightness(120%); 
+}
+
+#content .my-word{
+    text-align: left;
+    line-height: 1.2rem;
+    letter-spacing: 0.001rem;
+}
+
+/* Im really good at */
+#goodAt .skill-title{
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 16px;
+    font-size: 18px;
+}
+
+#goodAt .skill-name{
+    letter-spacing: 10px;    
+    font-size: 15px;
+    font-weight: 400;
+    margin: 15px 0;
+}
+
+#goodAt .skill-name i {
+    font-weight: 600;
+}
+
+#goodAt .skill-bar {
+    position: relative; 
+    height: 30px; 
+    margin-bottom: 10px; 
+}
+
+#goodAt .skill-bar1,
+.skill-bar2 {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    height: 100%; 
+    line-height: 30px; 
+    color: white; 
+    padding: 0 10px; 
+    box-sizing: border-box; 
+}
+
+#goodAt .skill-bar1 {
+    z-index: 1;
+}
+
+#goodAt .skill-bar2 {
+    z-index: 2; 
+}
+
+#goodAt .skill-percent{
+    text-align: center;
+}
+
+/* Portfolio */
+.portfolio {
+     margin-top: 35px;
+}
+
+.portfolio-achievement {
+    background-color: #616161;
+    display: flex;             
+    justify-content: space-around; 
+    align-items: center;       
+    gap: 20px;                 
+    color: #fff;
+    font-weight: bold;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}  
+
+.portfolio-index {
+    text-align: center;       
+    flex: 1;                   
+    padding: 10px;             
+    border: none;     
+    border-radius: 5px;        
+}
+
+.portfolio-index p {
+    margin: 0;                 
+}
+
+.portfolio-index p:first-child {
+    font-size: 1em;               
+    margin-bottom: 10px;       
+}
+
+#portfolio .portfolio-img{
+    position: relative;
+    padding-top: 30%;
+    background: url("https://www.w3schools.com/w3images/parallax2.jpg") top center/cover no-repeat;
+    background-size: cover;
+    background-position: center bottom; 
+
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr)); 
+    grid-template-rows: repeat(2, minmax(200px, 1fr));    
+    gap: 20px;  
+    width: 100%;     
+    max-width: 1200px;         
+    margin: 0 auto;           
+    padding: 20px;            
+}
+
+.image-grid img {
+    cursor: pointer;
+    width: 100%;                
+    height: 100%;                 
+    object-fit: cover;             
+           
+}
+
+/* Load button*/
+
+#load-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#load-button button {
+    color: #000;
+    background-color: #f1f1f1;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#load-button button:hover {
+    background-color: #ccc;
+}
+
+/* Contact image */
+
+#contact-image {
+ 
+    margin-top: 46px;
+    height: 500px;
+    background: url('https://www.w3schools.com/w3images/parallax3.jpg') no-repeat center center; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#contact-image .contact-text {
+    position: absolute;
+    bottom: 50%;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 10px;
+    width: 28%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 12px 24px;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+
+}
+
+#contact-image .contact-title {
+    padding: 12px 24px;
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+ 
+}
+
+/* Contact form */
+
+.s-full-width {
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.s-full-width:hover {
+    color: #000;
+    background-color: #ccc;
+
+}
+
+.contact-content{
+    margin-top: 50px;
+    margin-bottom:  100px;
+} 
+
+.contact-info{
+    font-size: 18px; 
+    line-height: 1.5;  
+}
+
+.contact-img{
+    width: 320px;
+    border-radius: 3px;
+}
+
+.contact-form-title{
+    padding: 15px 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.contact-form-title i {
+    font-weight: 600;
+}
+
+.contact-info i[class*="ti-"]{
+    font-weight: 600;
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-info a{
+    color: aquamarine;
+    opacity: 0.8;
+}
+
+
+.contact-form{
+    font-size: 15px; 
+}
+
+.contact-form .form-control{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+
+/* Footer */
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+    background-color: #777;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#footer:hover {
+   background-color: #000;
+}
+
+#footer button {  
+    background-color: #f1f1f1;
+    color: #000000;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%); 
+   
+}
+
+
+#footer button i {
+    color: #000;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#footer button:hover {
+    background-color: #ccc;
+}
+
+#footer .socials-list{
+    margin-top: 60px;
+    display: flex;
+    justify-self: center;
+    gap: 20px;
+ 
+}
+#footer .socials-list a{
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 24px;
+}
+
+#footer .socials-list a:hover{
+    color: rgba(255, 255, 255, 1);
+}
+#footer .copyright{
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 1);
+}
+
+#footer .copyright a{  
+    color: rgba(255, 255, 255, 0.8);
+
+}
+
+#footer:hover .copyright,
+#footer:hover .copyright a {
+    color: rgba(255, 255, 255, 1); 
+} 
+
+#footer .copyright a:hover {  
+    color: #4CAF50; 
+}
+
+
+
+
+
+
+
